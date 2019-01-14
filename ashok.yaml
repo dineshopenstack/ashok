@@ -1,0 +1,12 @@
+---
+- hosts: 192.168.41.8
+  tasks:
+  - name: Add epel-release repo
+    yum:
+      name: epel-release
+      state: present
+
+  - name: Install nginx
+    yum:
+      name: nginx
+      state: present
